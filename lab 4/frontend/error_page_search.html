@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	%from collections import Counter
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css">
+
+</head>
+<title>No matching search</title>
+
+<body style="background-color:white;"></body>
+
+% if login == True:
+<p>
+    <form action = "/logout" method = "route">
+	<div class="ui labeled button" tabindex="0" style="float: right">
+  		<button class="ui circular google plus icon button">
+  	<i class="google plus icon"></i></button>
+  		<button class="ui red basic  button" type="submit" style="float: right">Logout</button>
+	</div>
+	</form>
+
+      <div class="ui  red simple dropdown right item"style="float:right">
+          <img  class="ui mini circular image" src="{{pic}}" style="float:right;">
+          <i class="red dropdown icon"style="float:right"></i>
+
+        <div class="ten wide menu" style="float:left">
+            <h><b>{{name}}</b></h>
+            <h>{{email}}</h>
+            <div class="item" onclick="window.location = 'http://www.gmail.com'"><i class="mail small red icon" style="float:left"></i>Mail </div>
+
+
+        </div>
+      </div></p>
+<br>
+<br>
+<br>
+    <div class="ui red  small compact menu" style="float:right">
+      <div class="ui red simple dropdown right item" style="float:right">
+        <i class="at  red large icon"></i>
+
+
+        <i class="red dropdown icon"></i>
+        <div class="ten wide menu">
+            <div class="item" onclick="window.location = 'http://www.facebook.com'"><button class="ui circular facebook big icon button"><i class="facebook big icon"></i></button><i class=" ui red header">Facebook</i> </div>
+            <div class="item" onclick="window.location = 'http://www.twitter.com'"><button class="ui circular twitter big icon button"><i class="twitter big icon"></i></button><i class=" ui red header">Twitter</i> </div>
+            <div class="item" onclick="window.location = 'http://www.linkdein.com'"><button class="ui circular linkedin big icon button"><i class="linkedin big icon"></i></button><i class=" ui red header">LinkedIn</i> </div>
+            <div class="item" onclick="window.location = 'http://www.instagram.com'"><button class="ui circular instagram big icon button"><i class="instagram big icon"></i></button><i class=" ui red header">Instagram</i> </div>
+            <div class="item" onclick="window.location = 'http://www.youtube.com'"><button class="ui circular youtube big icon button"><i class="youtube big icon"></i></button><i class=" ui red header">Youtube</i> </div>
+        </div>
+      </div>
+</div>
+</div>
+
+
+
+
+
+
+% else:
+	<p>
+		<form action = "/login" method = "route">
+	<div class="ui labeled button" tabindex="0" style="float: right">
+  		<button class="ui circular google plus icon button">
+  	<i class="google plus icon"></i></button>
+  		<button class="ui red basic button" type="submit" style="float: right">Login</button>
+	</div>
+	</form>
+<!--this is our drop down<button onclick="window.location = 'http://www.facebook.com'">HTML Codes!</button> menu-->
+<br>
+<br>
+<br>
+    <div class="ui red compact menu" style="float:right">
+      <div class="ui red simple dropdown right item">
+        <i class="at  red large icon"></i>
+
+
+        <i class="red dropdown icon"></i>
+        <div class="ten wide menu">
+            <div class="item" onclick="window.location = 'http://www.facebook.com'"><button class="ui circular facebook big icon button"><i class="facebook big icon"></i></button><i class=" ui red header">Facebook</i> </div>
+            <div class="item" onclick="window.location = 'http://www.twitter.com'"><button class="ui circular twitter big icon button"><i class="twitter big icon"></i></button><i class=" ui red header">Twitter</i> </div>
+            <div class="item" onclick="window.location = 'http://www.linkdein.com'"><button class="ui circular linkedin big icon button"><i class="linkedin big icon"></i></button><i class=" ui red header">LinkedIn</i> </div>
+            <div class="item" onclick="window.location = 'http://www.instagram.com'"><button class="ui circular instagram big icon button"><i class="instagram big icon"></i></button><i class=" ui red header">Instagram</i> </div>
+            <div class="item" onclick="window.location = 'http://www.youtube.com'"><button class="ui circular youtube huge big button"><i class="youtube big icon"></i></button><i class=" ui red header">YouTube</i> </div>
+        </div>
+      </div>
+</div>
+<!--this is our drop down menu-->
+	</p>
+
+%end
+
+
+
+
+
+
+
+<br>
+
+	<img class="ui centered small image" src="http://i.giphy.com/3o6Ztfs22zj8g1DPAA.gif" ;>
+
+<p style="color:Red; text-align:center; font-size:100%"> There is no matching results according to your search...</p>
+
+<p style="color:Red; text-align:center; font-size:100%"> You can click here to search
+    <a href="https://en.wikipedia.org/wiki/{{mykeyword}}">
+        <span style="color:#1e77ba"><u>{{mykeyword}}</u></span></a>
+    and
+    <a href="https://en.wikipedia.org/wiki/{{word_temp}}">
+        <span style="color: #1e77ba"><u>{{word_temp}}</u></span></a>
+    in Wikipedia
+</p>
+
+<p style="color:Red; text-align:center; font-size:100%"> You can click here to search
+    <a href="https://www.google.ca/#q={{Google_Search_Name}}">
+        <span style="color:#1e77ba"><u>{{mykeyword}}</u></span></a>
+    and
+    <a href="https://www.google.ca/#q={{Original_Google_Search_Name}}">
+        <span style="color: #1e77ba"><u>{{word_temp}}</u></span></a>
+    in Google
+</p>
+<p style="color:Red; text-align:center; font-size:100%"> You can click here to search
+    <a href="http://www.bing.com/search?q={{Google_Search_Name}}">
+        <span style="color:#1e77ba"><u>{{mykeyword}}</u></span></a>
+    and
+    <a href="http://www.bing.com/search?q={{Original_Google_Search_Name}}">
+        <span style="color:#1e77ba"><u>{{word_temp}}</u></span></a>
+    in Bing
+</p>
+</head>
+
+<body>
+    <div>
+        <a href="/" style="text-align: center">
+                    <button  style="vertical-align:center" class="ui circular centered red home small icon button"><i class=" centered home big icon"></i></button><i class=" ui  centered small red header">Back to Homepage</i>
+</a>
+    </div>
+</body>
+
+</html>

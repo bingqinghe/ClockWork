@@ -1,0 +1,95 @@
+
+<!--This is the template for the search query page with the history table-->
+<!DOCTYPE html>
+<html lang="en">
+%from collections import Counter
+<head>
+	<title> Clockwork </title>
+</head>
+
+
+<body style="background-color:black;">
+
+
+
+<!--input box-->
+<p>
+ <form  action="/"  method="get" style="font-size:200%;text-align: center ">
+    <img src="http://i.giphy.com/l0HlGDIMVUoQPNUVG.gif" style="vertical-align:middle;width:20%;height:20%;" >
+            <input style="font-size:80%;width:30%;"name="keywords" type="text">
+	<input value="Search" type="submit" >
+
+</form>
+</p>
+
+
+
+<h2 style="color:whitesmoke; text-align:center"><strong>Top Search History</strong></h2>
+
+<!--top search table-->
+<style>
+	table, th, td {
+    border: 2px solid darkred;}
+th {
+
+    padding: 8px;
+	text-align: center;
+	color:red;
+	font-size: 150%;
+
+}
+td{
+	padding: 6px;
+	text-align: center;
+	color:white;
+	font-size: 120%;}
+</style>
+
+
+<!--Table to store the history-->
+%history = [element.lower() for element in history]
+	%sorted = Counter(history)
+	%rank = sorted.most_common(20)
+	%i = 0
+
+
+	<table id="history" align="center" style="width:60%">
+
+		<tr>
+
+			<th>Keyword</th>
+			<th>Count</th>
+		</tr>
+		<!--Only display 20 words-->
+		%while (i<len(rank)):
+		<tr>
+				<!--Data cells-->
+				<td>{{rank[i][0]}}</td>
+				<td>{{rank[i][1]}}</td>
+		</tr>
+		%i=i+1
+		%end
+	</table>
+
+
+</body>
+% if login == True:
+	<img src="{{pic}}" style="vertical-align:middle; width: 7%; height: 7%;">
+	<h style="color: white"> {{name}} </h>
+	<h style="color:white"> {{email}} </h>
+
+	<p>
+    	<form action = "/logout" method = "route">
+    	<input value = "Logout" type = "submit">
+	</form>
+	</p>
+
+% else:
+	<p>
+		<form action = "/login" method = "route">
+		<input value = "Login" type = "submit">
+	</form>
+	</p>
+
+
+</html>

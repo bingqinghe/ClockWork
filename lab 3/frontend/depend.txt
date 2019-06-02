@@ -1,0 +1,4 @@
+sudo apt-get install python-tk
+sudo pip install matplotlib
+sudo pip install mpld
+sudo pip install jinja2

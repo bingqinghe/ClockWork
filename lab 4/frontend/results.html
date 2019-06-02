@@ -1,0 +1,238 @@
+<!--this is the result page and allows the user to go back to the homepage-->
+<!DOCTYPE html>
+<p lang="en">
+
+<link rel="stylesheet" href="css/layout.css" type="text/css">
+<script type="text/javascript" src="script.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="http://listjs.com/assets/javascripts/list.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.pagination.js/0.1.1/list.pagination.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css">
+
+
+%from collections import Counter
+<head>
+	<title> Clockworking </title>
+</head>
+
+<body style="background-color:white;"></body>
+
+
+
+
+
+<body>
+<!--input box-->
+<p>
+<img class="ui small image" src="http://i.giphy.com/26hit8HVwNgRwkS3K.gif" style="width:11%;height:11% ;float:left";>
+<br>
+<form class="ui twenty wide column large form" action="/"  method="get" style=" vertical-align: center; "><input style="font-size:80%;width:30%;"name="keywords" type="text">
+	<button class="ui red medium button" type="submit">Search</button>
+
+</form>
+
+<style>
+#myButton {
+position: absolute;
+top: 0px;
+right: 0px;
+}
+</style>
+<style>
+#myPic {
+position: absolute;
+top: 0px;
+right: 125px;
+}
+</style>
+
+
+
+% if login == True:
+<p>
+    <form action = "/logout" method = "route">
+	<div class="ui labeled button" id="myButton" tabindex="0" style="float: right">
+  		<button class="ui circular google plus icon button">
+  	<i class="google plus icon"></i></button>
+  		<button class="ui red basic  button" type="submit" style="float: right">Logout</button>
+	</div>
+
+
+      <div class="ui  red simple dropdown  item" id="myPic" style="float:right">
+          <img  class="ui mini circular image" src="{{pic}}" style="float:right;">
+          <i class="red dropdown icon"style="float:right"></i>
+
+        <div class="ten wide menu" style="float:left">
+            <h><b>{{name}}</b></h>
+            <h>{{email}}</h>
+            <div class="item" onclick="window.location = 'http://www.gmail.com'"><i class="mail small red icon" style="float:left"></i>Mail </div>
+
+
+        </div>
+      </div></form></p>
+<br>
+
+    <div class="ui red  small compact menu" style="float:right">
+      <div class="ui red simple dropdown right item" style="float:right">
+        <i class="at  red large icon"></i>
+
+
+        <i class="red dropdown icon"></i>
+        <div class="ten wide menu">
+            <div class="item" onclick="window.location = 'http://www.facebook.com'"><button class="ui circular facebook big icon button"><i class="facebook big icon"></i></button><i class=" ui red header">Facebook</i> </div>
+            <div class="item" onclick="window.location = 'http://www.twitter.com'"><button class="ui circular twitter big icon button"><i class="twitter big icon"></i></button><i class=" ui red header">Twitter</i> </div>
+            <div class="item" onclick="window.location = 'http://www.linkdein.com'"><button class="ui circular linkedin big icon button"><i class="linkedin big icon"></i></button><i class=" ui red header">LinkedIn</i> </div>
+            <div class="item" onclick="window.location = 'http://www.instagram.com'"><button class="ui circular instagram big icon button"><i class="instagram big icon"></i></button><i class=" ui red header">Instagram</i> </div>
+            <div class="item" onclick="window.location = 'http://www.youtube.com'"><button class="ui circular youtube big icon button"><i class="youtube big icon"></i></button><i class=" ui red header">Youtube</i> </div>
+        </div>
+      </div>
+</div>
+</div>
+
+
+
+
+
+% else:
+	<p>
+		<form action = "/login" method = "route">
+	<div class="ui labeled button" id="myButton" tabindex="0" style="float: right">
+  		<button class="ui circular google plus icon button">
+  	<i class="google plus icon"></i></button>
+  		<button class="ui red basic button"  type="submit" style="float: right">Login</button>
+	</div>
+	</form>
+<!--this is our drop down<button onclick="window.location = 'http://www.facebook.com'">HTML Codes!</button> menu-->
+<br>
+
+    <div class="ui red compact menu" style="float:right">
+      <div class="ui red simple dropdown right item">
+        <i class="at  red large icon"></i>
+
+
+        <i class="red dropdown icon"></i>
+        <div class="ten wide menu">
+            <div class="item" onclick="window.location = 'http://www.facebook.com'"><button class="ui circular facebook big icon button"><i class="facebook big icon"></i></button><i class=" ui red header">Facebook</i> </div>
+            <div class="item" onclick="window.location = 'http://www.twitter.com'"><button class="ui circular twitter big icon button"><i class="twitter big icon"></i></button><i class=" ui red header">Twitter</i> </div>
+            <div class="item" onclick="window.location = 'http://www.linkdein.com'"><button class="ui circular linkedin big icon button"><i class="linkedin big icon"></i></button><i class=" ui red header">LinkedIn</i> </div>
+            <div class="item" onclick="window.location = 'http://www.instagram.com'"><button class="ui circular instagram big icon button"><i class="instagram big icon"></i></button><i class=" ui red header">Instagram</i> </div>
+            <div class="item" onclick="window.location = 'http://www.youtube.com'"><button class="ui circular youtube huge big button"><i class="youtube big icon"></i></button><i class=" ui red header">YouTube</i> </div>
+        </div>
+      </div>
+</div>
+<!--this is our drop down menu-->
+	</p>
+
+%end
+</p>
+</body>
+
+<br>
+<body>
+
+<br>
+<br>
+<div id="autocorrect">
+   <h2 class="ui red header"><small>Showing results for: <span style="color:#1e77ba"><em>{{mykeyword}}</em></span></small></h2>
+
+</div>
+
+<style>
+    div.serif {
+        font-family: "Times New Roman", Times, serif;
+        font-size: larger;
+        font-weight: 600;
+        color: #502aa1;
+    }
+
+    a:link {
+        color: rgb(6,101,37);
+        text-decoration: underline;
+    }
+    a:visited {
+        color: rgb(6,101,37)
+    }
+
+</style>
+  <div id="test-list">
+    <ul class="list">
+		% n = len(url_list)
+		% i = 0
+		% for i in range(n):
+			<li><p class="name">
+                <div class="serif"> {{url_list[i][0]}} </div>
+				<a href="{{url_list[i][1]}}"><u>{{url_list[i][1]}}</u></a>
+			</p></li>
+			% i = i+1
+			% end
+    </ul>
+      <img class="ui small image" src="https://cdn1.iconfinder.com/data/icons/menu-and-nav-1/32/point_right_arrow_ui_nav_navigation_navigate-128.png" style="width:3%;height:3% ;float:left";>
+<ul class="pagination" ></ul>
+
+
+
+  </div>
+
+</body>
+
+<style>
+.pagination li {
+  display:inline-block;
+  padding:8px;
+  color:red
+}
+</style>
+
+<script>
+var monkeyList = new List('test-list', {
+  valueNames: ['name'],
+  page: 9,
+  size:20,
+  plugins: [ ListPagination({}) ],
+});
+</script>
+<div class="ui horizontal divider"> CLOCKWORK </div>
+<div class="row">
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>
+
+</body>
+<body>
+
+<div id="Other Search Engine link">
+    <h4 class="ui red header"> Here is the link to search
+        <a href="https://en.wikipedia.org/wiki/{{mykeyword}}">
+            <span style="color: #1e70bf"><u>{{mykeyword}}</u></span></a>
+        and
+         <a href="https://en.wikipedia.org/wiki/{{word_temp}}">
+            <span style="color: #1e70bf"><u>{{word_temp}}</u></span></a>
+        in Wikipedia</h4>
+
+    <h4 class="ui red header"> Here is the link to search
+        <a href="https://www.google.ca/#q={{Google_Search_Name}}">
+            <span style="color: #1e70bf"><u>{{mykeyword}}</u></span></a>
+        and
+        <a href="https://www.google.ca/#q={{Original_Google_Search_Name}}">
+            <span style="color: #1e70bf"><u>{{word_temp}}</u></span></a>
+        in Google</h4>
+
+    <h4 class="ui red header"> Here is the link to search
+        <a href="http://www.bing.com/search?q={{Google_Search_Name}}">
+            <span style="color: #1e70bf"><u>{{mykeyword}}</u></span></a>
+        and
+        <a href="http://www.bing.com/search?q={{Original_Google_Search_Name}}">
+            <span style="color: #1e70bf"><u>{{word_temp}}</u></span></a>
+        in Bing </h4>
+
+
+</div>
+</body>
+</html>

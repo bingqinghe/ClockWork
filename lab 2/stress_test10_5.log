@@ -1,0 +1,42 @@
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking ec2-52-70-225-223.compute-1.amazonaws.com (be patient).....done
+
+
+Server Software:        PasteWSGIServer/0.5
+Server Hostname:        ec2-52-70-225-223.compute-1.amazonaws.com
+Server Port:            80
+
+Document Path:          /?keywords=helloworld+foo+bar
+Document Length:        1275 bytes
+
+Concurrency Level:      5
+Time taken for tests:   0.141 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      14370 bytes
+HTML transferred:       12750 bytes
+Requests per second:    70.71 [#/sec] (mean)
+Time per request:       70.715 [ms] (mean)
+Time per request:       14.143 [ms] (mean, across all concurrent requests)
+Transfer rate:          99.22 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       31   32   0.8     32      33
+Processing:    34   37   1.9     38      39
+Waiting:       33   35   1.7     36      38
+Total:         64   69   2.4     69      72
+
+Percentage of the requests served within a certain time (ms)
+  50%     69
+  66%     71
+  75%     71
+  80%     71
+  90%     72
+  95%     72
+  98%     72
+  99%     72
+ 100%     72 (longest request)

@@ -1,0 +1,82 @@
+<!--this is the result page and allows the user to go back to the homepage-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Clockworking </title>
+</head>
+
+<body style="background-color:black;">
+<p style="color:white; text-align:center; font-size:200%">
+<img src="http://i.giphy.com/l2SqaWesnsoQnWoDe.gif" style="vertical-align:middle;width:13%;height:13%;" >
+	<strong>Search for:" {{SearchFor}}"</strong>
+
+<!--search again button-->
+<a href="/">
+	<input value="Back to Search", type="submit">
+	</a>
+</p>
+<br>
+<h1 style="text-align:center;color:white"> Total numbers of keywords:  {{word_count}}</h1>
+<!--result table-->
+<style>
+	table, th, td {
+    border: 1px solid whitesmoke;}
+th {
+
+    padding: 8px;
+	text-align: center;
+	color:red;
+	font-size: 150%;
+
+}
+td{
+	padding: 6px;
+	text-align: center;
+	color:white;
+	font-size: 120%;
+}</style>
+
+
+<table id ="results" align="center" style="width:60%">
+
+	<tr>
+		<th>Word</th>
+		<th>Count</th>
+	</tr>
+
+	<!--Get the occurrences and the word in each keyword-->
+	%for word in rows:
+		%occurrences = crows.count(word)
+	<tr>
+		<td>{{word}}</td>
+		<td>{{occurrences}}</td>
+	</tr>
+
+	%end
+
+</table>
+
+<br>
+<br>
+
+% if login == True:
+	<img src={{pic}} style="vertical-align:middle; width: 7%; height: 7%;">
+	<h style="color: white"> {{name}} </h>
+	<h style="color:white"> {{email}} </h>
+
+
+	<p>
+    	<form action = "/logout" method = "route">
+    	<input value = "Logout" type = "submit">
+	</form>
+	</p>
+% else:
+	<p>
+		<form action = "/login" method = "route">
+		<input value = "Login" type = "submit">
+	</form>
+	</p>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+********* CSC326: Lab 3 - Clockwork *********
+
+Group #: g326-1-007
+Team members:
+	- Karim Koreitem: k.koreitem@mail.utoronto.ca | Student #: 998690938
+	- Jennifer Wang: jiaying.wang@mail.utoronto.ca | Student #: 1000337502
+	- Bingqing HE: bingqing.he@mail.utoronto.ca | Student #: 1001308060
+
+********* Web Application General Information *********
+
+Public IP Address: 54.81.54.127 (http://ec2-54-81-54-127.compute-1.amazonaws.com)
+Enabled Google APIs: No APIs enabled.
+Benchmark setup: t2.micro, Paste webserver, Apache Bench for load testing, top and dstat for cpu/memory utilization
+
+Pagerank reference implementation was used. 
+
+********* Database *********
+
+lab3.db contains www.eecg.utoronto.ca to depth 1.
+

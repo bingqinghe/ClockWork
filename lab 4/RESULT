@@ -1,0 +1,24 @@
+********* CSC326: Lab 3 - Clockwork *********
+
+Group #: g326-1-007
+Team members:
+	- Karim Koreitem: k.koreitem@mail.utoronto.ca | Student #: 998690938
+	- Jennifer Wang: jiaying.wang@mail.utoronto.ca | Student #: 1000337502
+	- Bingqing HE: bingqing.he@mail.utoronto.ca | Student #: 1001308060
+
+
+********* Web Application Benchmark results *********
+
+Maximum # of connections before connection drops: 56
+Maximum RPS that can be sustained with max # of connections: 504.18
+Avg response time: 111.072 || 1.983 [ms] (across all concurrent requests)
+99th percentile response time: 1077 [ms]
+CPU utilization: 74.4%
+Memory utilization: 3.5%
+
+Some test logs are included in the submission:
+- test.log
+- test2.log
+- test3.log
+- test4.log
+- test5.log
